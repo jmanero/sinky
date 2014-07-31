@@ -1,0 +1,32 @@
+<% include include/top.ejs -%>
+<!-- session-list -->
+    <div class="container">
+      <div class="page-header">
+          <h1>Sessions</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th class="col-md-3">UUID</th>
+                <th class="col-md-3">Start</th>
+                <th class="col-md-2">Source</th>
+                <th>Data</th>
+              </tr>
+            </thead>
+            <tbody id="session-table">
+<% currentKeys.forEach(function(key) { var session = current[key]; -%>
+              <% include include/session-row.ejs -%>
+<% }) -%>
+<% sessions.forEach(function(session) { -%>
+              <% include include/session-row.ejs -%>
+<% }) -%>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/assets/js/session.js"></script>
+<% include include/bottom.ejs -%>

@@ -1,0 +1,6 @@
+<tr>
+  <th><%= session.id %></th>
+  <td><%= session.start %></td>
+  <td><%= session.source.match(/.{2}/g).map(function(o) { return parseInt(o, 16); }).join(".") %> (<%= session.source %>)</td>
+  <td><pre id="<%= session.id %>-data"><%= session.data.join("\n") %></pre></td>
+</tr>

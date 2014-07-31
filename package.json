@@ -2,10 +2,6 @@
   "name": "sinky",
   "version": "0.0.1",
   "description": "Sinkhole socket terminator",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git@github.com:jmanero/sinky.git"
@@ -14,6 +10,15 @@
     "Sinkhole"
   ],
   "author": "John Manero <john.manero@gmail.com>",
+  "dependencies": {
+    "ejs": "1.0.x",
+    "express": "4.7.x",
+    "express-delight": "0.1.3",
+    "libuuid": "0.1.x",
+    "levelup": "0.18.x",
+    "leveldown": "0.10.x",
+    "socket.io": "1.0.x"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jmanero/sinky/issues"
